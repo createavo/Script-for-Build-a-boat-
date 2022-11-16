@@ -178,7 +178,7 @@ local function FLY()
     _G.FLYING = true
     local BG = Instance.new('BodyGyro', T)
     local BV = Instance.new('BodyVelocity', T)
-    BG.P = 94
+    BG.P = 9e4
     BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
     BG.cframe = T.CFrame
     BV.velocity = Vector3.new(0, 0.1, 0)
@@ -205,7 +205,7 @@ local function FLY()
       until not _G.FLYING
       CONTROL = {F = 0, B = 0, L = 0, R = 0}
       lCONTROL = {F = 0, B = 0, L = 0, R = 0}
-      SPEED = s
+      SPEED = 0
       BG:destroy()
       BV:destroy()
       LP.Character.Humanoid.PlatformStand = false
